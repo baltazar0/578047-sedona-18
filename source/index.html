@@ -14,8 +14,9 @@
         alt="логотип Седона">
     </a>
     <nav class="page-header__main-nav main-nav">
-      <button class="main-nav__toggle main-nav__toggle--open" type="button">Открыть меню</button>
-      <button class="main-nav__toggle main-nav__toggle--close" type="button">Закрыть меню</button>
+      <button class="main-nav__toggle" type="button">
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
       <div class="main-nav__wrapper">
         <ul class="main-nav__list">
           <li class="main-nav__item main-nav__item--active">
@@ -39,10 +40,12 @@
   </header>
   <main class="page-main">
     <h1 class="visually-hidden">Седона – подбор гостиниц</h1>
+    <div class="intro">
+      <b class="intro__title">Седона — небольшой городок в Аризоне, заслуживающий большего!</b>
+      <p class="intro__text">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
+    </div>
     <section class="features">
       <h2 class="visually-hidden">Преимущества</h2>
-      <b class="features__title">Седона — небольшой городок в Аризоне, заслуживающий большего!</b>
-      <p class="features__text">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
       <ul class="features__reason-list reason">
         <li class="reason__item">
           <h3 class="reason__title">Настоящий городок
@@ -129,5 +132,4 @@
     </div>
   </footer>
 </body>
-
 </html>
