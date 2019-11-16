@@ -1,0 +1,40 @@
+.feedback__legend {
+  font-family: @font-family-title;
+  font-weight: bold;
+  .font-text(18px, 26px);
+  color: @title-color;
+}
+
+.feedback__label {
+  .font-text(14px, 26px);
+
+  &--radio,
+  &--checkbox {
+    font-family: @font-family-title;
+    font-weight: bold;
+    .font-text(18px, 26px);
+    color: @title-color;
+    text-transform: none;
+  }
+}
+
+.feedback__input {
+  font-family: @font-family-title;
+  font-weight: bold;
+  .font-text(18px, 26px);
+  color: @title-color;
+
+  text-transform: none;
+
+  &::placeholder {
+    color: @title-color;
+  }
+
+  &--text {
+    background-color: @bgc-2;
+  }
+}
+
+.feedback__list {
+  .reset-list();
+}
