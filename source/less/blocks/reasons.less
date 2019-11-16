@@ -1,0 +1,32 @@
+.reasons__list {
+  .reset-list();
+}
+
+.reasons__item {
+  &--bgc-1 {
+    color: @white;
+    background-color: @bgc-1;
+  }
+
+  &--bgc-2 {
+    background-color: @bgc-2;
+  }
+}
+
+.reasons__title {
+  font-family: @font-family-title;
+  font-weight: bold;
+  .font-text(18px; 26px);
+
+  &--bgc-2 {
+    color: @title-color;
+  }
+}
+
+.reasons__number {
+  .font-text(16px; 26px);
+}
+
+.reasons__describe {
+  .font-text(14px; 21px);
+}
