@@ -5,6 +5,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Academy: Седона</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preload" href="fonts/opensans.woff2" as="font">
+    <link rel="preload" href="fonts/opensansbold.woff2" as="font">
 </head>
 
 <body>
@@ -42,7 +45,8 @@
         <h1 class="visually-hidden">Страница формы отзыва</h1>
         <div class="intro">
             <b class="intro__title">Оставьте свой отзыв</b>
-            <p class="intro__text">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами
+            <p class="intro__text intro__text--inner">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о
+                посещенных вами
                 достопримечательностях</p>
         </div>
         <section class="feedback">
@@ -54,7 +58,7 @@
                         <div class="feedback__label-wrapper">
                             <label class="feedback__label feedback__label--name" for="name">Имя*:</label>
                             <input class="feedback__input feedback__input--name" id="name" name="name" type="text"
-                                placeholder="Петр*" required>
+                                placeholder="Петр" required>
                         </div>
                         <div class="feedback__label-wrapper">
                             <label class="feedback__label feedback__label--name" for="surname">Фамилия*:</label>
@@ -191,4 +195,5 @@
         </div>
     </footer>
 </body>
+
 </html>
