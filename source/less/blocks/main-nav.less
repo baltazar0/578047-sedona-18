@@ -5,6 +5,11 @@
   background-color: @bgc-1;
 }
 
+.main-nav__wrapper {
+  display: flex;  
+  margin: 0 auto;
+}
+
 .main-nav__list {
   .reset-list();
 }
@@ -14,4 +19,29 @@
     text-decoration: none;
     color: @white;
   }
+}
+
+@media (min-width: @tablet-width) {
+  .main-nav {
+    .font-text(14px; 26px); 
+    background-color: @white;
+  }
+
+  .main-nav__list {
+    display: flex;
+  }
+
+  .main-nav__item {
+    & a { 
+      color: @title-color;
+    }
+  }
+
+  .main-nav__toggle {
+    display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  
 }
