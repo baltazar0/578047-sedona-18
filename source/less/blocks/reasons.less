@@ -4,14 +4,27 @@
 
 .reasons__item {
   text-align: center;
-  &--bgc-1 {
+
+  &--bgc-1 { 
     color: @white;
     background-color: @bgc-1;
+    //  text-align: center;
+    //  background-image:  url("../../img/bg-triangle.svg");  
+    // background-size: 1200px 37px;
+    // background-position: center top;
+    // background-repeat: no-repeat;
   }
 
   &--bgc-2 {
     background-color: @bgc-2;
   }
+}
+
+.reasons__item-wrapper {
+  width: 320px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .reasons__title {
@@ -37,4 +50,68 @@
 .reasons__img {
   display: block;
   margin: 0 auto;
+}
+
+@media (min-width: @tablet-width) {
+  .reasons__list {
+    display: flex;
+    //  flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .reasons__item {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    &--img {
+      width: 100%;
+    }
+
+    &--no-img {
+      width: 33%;
+      margin: 0 auto;
+      flex-grow: 1;
+    }
+
+    &--bgc-1 {
+      width: 33.3%; 
+    }
+  }
+
+  .reasons__item-wrapper {
+    width: 230px;
+    min-height: 256px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .reasons__img-wrapper {
+    width: 66.7%;
+    height: 256px;
+    margin: 0;
+
+    &--invert {
+      order: -1;
+    }
+  }
+
+  .reasons__img {
+    width: 800px;
+    height: 256px;
+    object-fit: cover;
+  }
+
+  .reasons__title {
+    .font-text(21px; 26px);
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .reasons__img {
+    width: 800px;
+    height: 400px;
+  }
 }

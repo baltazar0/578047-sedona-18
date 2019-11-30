@@ -16,3 +16,24 @@
   display: flex;
   flex-wrap: wrap;
 }
+
+
+@media (min-width: @tablet-width) {
+  .page-footer__wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    // width: 768px;
+    margin: 0 auto;
+    padding: 55px 60px;
+    box-sizing: border-box;
+  }
+
+}
+
+@media (min-width: @desktop-width) {
+  .page-footer__wrapper { 
+    padding: 55px 120px;
+  }
+
+}
