@@ -1,0 +1,147 @@
+.video__list {
+  .reset-list();
+}
+
+.video__item {
+  position: relative;
+  padding: 0;
+}
+
+.video__wrapper {
+  width: auto;
+  margin: 0 auto;
+}
+
+.video__img {
+  display: block;
+  width: 320px;
+  height: 200px;
+  margin: 0 auto;
+  object-fit: cover;
+}
+
+.video__interface {
+  position: absolute;
+  bottom: -48px;
+  left: 20px;
+  width: 280px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.video__range-wrapper {
+  padding: 20px 20px;
+}
+
+.video__range-scale {
+  height: 2px;
+  background: yellow;
+}
+
+.video__range-bar {
+  width: 80%;
+  height: 2px;
+  background: red;
+}
+
+.video__range-handle {
+  position: absolute;
+  top: 22%;
+  left: 30%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 4px;
+  padding: 0;
+  border: 8px solid green;
+  border-radius: 50%;
+  background-color: #ababab;
+  box-sizing: content-box;
+  cursor: pointer;
+}
+
+.video__button-wrapper {
+  background-color: #f2f2f2;
+  display: flex;
+}
+
+.video__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 48px;
+  background-color: transparent;
+
+  border: none;
+  cursor: pointer;
+
+  &--replay {
+    margin-left: 20px;
+  }
+
+  &--fullscreen {
+    margin-right: 20px;
+  }
+
+  &--subtitles {
+
+    margin-left: auto;
+  }
+}
+
+.video__button path,
+.video__button polygon {
+  fill: red;
+}
+
+@media (min-width: @tablet-width) {
+  .video__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .video__img {
+    width: 648px;
+    height: 499px;
+  }
+
+  .video__button-wrapper {
+    background-color: transparent;
+    display: flex;
+  }
+
+  .video__interface {
+    bottom: 0;
+    left: 60px;
+    width: 648px;
+  }
+
+  .video__range-wrapper {
+    position: absolute;
+    width: 400px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+
+  .video__range-handle {
+    top: 49%;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .video__img {
+    width: 800px;
+    height: 500px;
+  }
+
+
+  .video__interface {
+    bottom: 0;
+    width: 800px;
+    left: 200px;
+  }
+
+  .video__range-handle {
+    top: 49%;
+  }
+}

@@ -1,12 +1,56 @@
+.feedback__fieldset {
+  padding: 0;
+  margin: 0;
+
+  text-align: left;
+  border: none;
+
+  &--name {
+    margin-bottom: 20px;
+  }
+
+  &--contact {
+    margin-bottom: 20px;
+  }
+
+  &--impression {
+    margin-bottom: 20px;
+  }
+
+  &--visit {
+    margin-bottom: 20px;
+  }
+
+  &--text {
+    margin-bottom: 20px;
+  }
+}
+
 .feedback__legend {
+  margin-bottom: 30px;
+
   font-family: @font-family-title;
   font-weight: bold;
   .font-text(18px, 26px);
   color: @title-color;
+  text-align: center;
+}
+
+.feedback__label-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  margin-bottom: 24px;
 }
 
 .feedback__label {
+  position: relative;
   .font-text(14px, 26px);
+
+  &--name {
+    width: auto;
+    margin-right: 15px;
+  }
 
   &--radio,
   &--checkbox {
@@ -16,9 +60,82 @@
     color: @title-color;
     text-transform: none;
   }
+
+
+  &--radio {
+    padding-left: 65px;
+  }
+
+  &--checkbox {
+    padding-left: 63px;
+  }
+
+
+  &--radio::before,
+  &--radio::after,
+  &--checkbox::before,
+  &--checkbox::after {
+    content: "";
+    position: absolute;
+    box-sizing: border-box;
+    cursor: pointer;
+  }
+
+  &--radio::before {
+    top: -9px;
+    left: 1px;
+    z-index: 1;
+    width: 39px;
+    height: 39px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 2px solid #000000;
+  }
+
+  &--radio::after {
+    display: none;
+    top: 3px;
+    left: 13px;
+    z-index: 2;
+    width: 16px;
+    height: 16px;
+    background-color: #63d1bb;
+    border-radius: 50%;
+  }
+
+  &--checkbox::before {
+    top: -12px;
+    left: 1px;
+    z-index: 1;
+    width: 40px;
+    height: 39px;
+    background-color: transparent;
+    border: 2px solid #000000;
+  }
+
+  &--checkbox::after {
+    display: none;
+    width: 22px;
+    height: 16px;
+    z-index: 2;
+    background: url("../img/icon-tick.svg") no-repeat;
+    background-size: cover;
+    left: 9px;
+    top: 0;
+  }
+}
+
+.feedback__input-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  margin-bottom: 24px;
 }
 
 .feedback__input {
+
+  flex-grow: 2;
+
   font-family: @font-family-title;
   font-weight: bold;
   .font-text(18px, 26px);
@@ -26,15 +143,145 @@
 
   text-transform: none;
 
+
   &::placeholder {
     color: @title-color;
   }
 
   &--text {
+    width: 100%;
+    min-height: 160px;
     background-color: @bgc-2;
+    padding: 0;
+    border: 0;
   }
+
+  &:checked ~ label::after {
+    display: block;
+  }
+}
+
+.feedback__icon-wrapper {
+  width: 58px;
+  border: 1px solid red;
 }
 
 .feedback__list {
   .reset-list();
+}
+
+.feedback__item {
+  margin-bottom: 20px;
+}
+
+.feedback__bottom {
+  width: 280px;
+}
+
+.feedback__send {
+  width: 100%;
+}
+
+.feedback__remark {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .feedback__form {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .feedback__container {
+    &--name {
+      width: 324px;
+    }
+
+    &--contact {
+      width: 648px;
+    }
+
+    &--impression {
+      width: 324px;
+      order: -1;
+    }
+
+    &--visit {
+      width: 648px;
+    }
+
+    &--text {
+      width: 648px;
+    }
+  }
+
+  .feedback__list {
+    &--checkbox {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  .feedback__item {
+    &--checkbox {
+      width: 324px;
+    }
+  }
+
+  .feedback__bottom {
+    display: flex;
+    flex-wrap: wrap;
+    width: 648px;
+  }
+
+  .feedback__send {
+    width: 324px;
+  }
+
+  .feedback__remark {
+    display: block;
+    width: 324px;
+    text-align: right;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .feedback__container {
+    &--name {
+      width: 480px;
+    }
+
+    &--contact {
+      width: 960px;
+    }
+
+    &--impression {
+      width: 480px;
+    }
+
+    &--visit {
+      width: 960px;
+    }
+
+    &--text {
+      width: 960px;
+    }
+  }
+
+  .feedback__fieldset-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .feedback__label {
+    &--contact {
+      width: 480px;
+    }
+  }
+
+  .feedback__item {
+    &--checkbox {
+      width: 240px;
+    }
+  }
 }

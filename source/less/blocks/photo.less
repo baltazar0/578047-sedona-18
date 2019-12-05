@@ -21,3 +21,59 @@
   font-weight: bold;
   color: @title-color;
 }
+
+.photo__link {
+  display: block;
+  margin: 0 auto;
+}
+
+.photo__img {
+  display: block;
+  width: 280px;
+  height: 280px;
+  margin: 0 auto;
+  object-fit: cover;
+}
+
+@media (min-width: @tablet-width) {
+  .photo__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .photo__item {
+    &:first-child {
+      width: 648px;
+    }
+
+    &:not(:first-child) {
+      width: 324px;
+    }
+  }
+
+  .photo__img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .photo {
+    padding: 0;
+  }
+
+  .photo__item {
+    &:first-child {
+      width: 1200px;
+    }
+
+    &:not(:first-child) {
+      width: 400px;
+    }
+  }
+
+  .photo__img {
+    width: 100%;
+    height: auto;
+  }
+}
