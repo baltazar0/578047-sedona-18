@@ -10,6 +10,13 @@
   background-repeat: no-repeat;
   box-sizing: border-box;
 
+  &--inner {
+    height: 157px;
+    padding-top: 51px;
+    background-size: auto;
+    background-position: 50% 100%;
+  }
+
   &::after {
     content: "";
     position: absolute;
@@ -28,6 +35,11 @@
   width: 281px;
   height: 214px;
   margin: 0 auto;
+
+  &--inner {
+    width: 230px;
+    height: 40px;
+  }
 }
 
 
@@ -37,6 +49,11 @@
     padding-top: 77px;
     background-image: url("../img/bg-back-tablet@1x.jpg");
     background-size: cover;
+
+    &--inner {
+      height: 290px; 
+      padding-top: 94px;
+    }
 
     &::after {
       background: url("../img/bg-intro-triangle-tablet.svg") no-repeat;
@@ -48,6 +65,10 @@
   .banner__img {
     width: 460px;
     height: 350px;
+
+    &--inner {
+      height: 80px;
+    }
   }
 }
 
