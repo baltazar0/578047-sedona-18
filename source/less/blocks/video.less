@@ -22,38 +22,39 @@
 
 .video__interface {
   position: absolute;
-  bottom: -48px;
+  bottom: -67px;
   left: 20px;
   width: 280px;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .video__range-wrapper {
-  padding: 20px 20px;
+  position: relative;
+  padding: 21px 20px 21px;
 }
 
 .video__range-scale {
-  height: 2px;
-  background: yellow;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.2);
 }
 
 .video__range-bar {
-  width: 80%;
-  height: 2px;
-  background: red;
+  width: 17%;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.2);
 }
 
 .video__range-handle {
   position: absolute;
-  top: 22%;
-  left: 30%;
+  top: 22px;
+  left: 21%;
   transform: translateY(-50%);
-  width: 4px;
-  height: 4px;
+  width: 1px;
+  height: 1px;
   padding: 0;
-  border: 8px solid green;
+  border: 4px solid @white;
   border-radius: 50%;
-  background-color: #ababab;
+  background-color: @white;
   box-sizing: content-box;
   cursor: pointer;
 }
@@ -68,32 +69,36 @@
   align-items: center;
   justify-content: center;
   width: 46px;
-  height: 48px;
+  height: 66px;
   background-color: transparent;
 
   border: none;
   cursor: pointer;
 
   &--replay {
-    margin-left: 20px;
+    margin-left: 10px;
   }
 
   &--fullscreen {
-    margin-right: 20px;
+    margin-right: 10px;
   }
 
   &--subtitles {
-
+    margin-right: 10px;
     margin-left: auto;
   }
 }
 
 .video__button path,
 .video__button polygon {
-  fill: red;
+  fill: #5c6870;
 }
 
 @media (min-width: @tablet-width) {
+  .video {
+    margin-bottom: 41px;
+  }
+
   .video__list {
     display: flex;
     flex-wrap: wrap;
@@ -106,7 +111,18 @@
 
   .video__button-wrapper {
     background-color: transparent;
-    display: flex;
+  }
+
+  .video__button {
+    height: 92px;
+
+    &--replay {
+      margin-left: 21px;
+    }
+
+    &--fullscreen {
+      margin-right: 27px;
+    }
   }
 
   .video__interface {
@@ -117,23 +133,35 @@
 
   .video__range-wrapper {
     position: absolute;
-    width: 400px;
-    left: 50%;
+    width: 390px;
+    left: 45%;
+    top: 23px;
     transform: translateX(-50%);
   }
 
+  .video__range-bar {
+    width: 27%;
+  }
 
   .video__range-handle {
-    top: 49%;
+    left: 30%;
+  }
+
+  .video__button path,
+  .video__button polygon {
+    fill: @white;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .video {
+    margin-bottom: 84px;
+  }
+
   .video__img {
     width: 800px;
     height: 500px;
   }
-
 
   .video__interface {
     bottom: 0;
@@ -141,7 +169,12 @@
     left: 200px;
   }
 
+  .video__range-wrapper {
+    width: 540px;
+  }
+
   .video__range-handle {
     top: 49%;
+    left: 24%;
   }
 }

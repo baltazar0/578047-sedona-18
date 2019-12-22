@@ -1,8 +1,28 @@
+.copyright {
+  align-self: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+}
+
 .copyright__developed {
+  margin-right: 13px;
   .font-text(14px; 26px);
   color: @title-color;
 }
 
 .copyright__link {
+  display: flex;
+  justify-content: center;
   text-decoration: none;
+
+  & path {
+    fill: @title-color;
+  }
+}
+
+.copyright__icon {
+  width: 27px;
+  height: 34px;
 }
