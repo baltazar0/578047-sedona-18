@@ -87,12 +87,30 @@
     margin-right: 10px;
     margin-left: auto;
   }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+    outline: none;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus svg {
+    outline: 2px solid @bgc-1;
+  }
 }
 
 .video__button path,
 .video__button polygon {
   fill: #5c6870;
 }
+
 
 @media (min-width: @tablet-width) {
   .video {

@@ -44,10 +44,24 @@
     box-shadow: inset 0 -7px 7px -7px rgba(1, 1, 1, 0.2);
   }
 
+  &:not(&--active):hover {
+    background-color: #669ec0;
+  }
+
+  &:not(&--active):active {
+    background-color: #5496bd;
+  }
+
   & a {
     display: block;
     text-decoration: none;
     color: @white;
+
+    &:active,
+    &:focus {
+      color: rgba(255, 255, 255, 0.3);
+      outline: none;
+    }
   }
 }
 
@@ -146,15 +160,33 @@
     &:nth-child(3) {
       margin-left: auto;
     }
+
+    &--active a {
+      color: #766357;
+    }
+
+    & a:hover {
+      color: @bgc-1;
+    }
+
+    &--active a:hover {
+      color: #604e43;
+    }
+
+    & a:active,
+    & a:focus {
+      color: rgba(0, 0, 0, 0.3);
+    }
+
+    &:not(&--active):hover,
+    &:not(&--active):active {
+      background-color: inherit;
+    }
   }
 
   .main-nav__toggle {
     display: none;
   }
-}
-
-.page-header__logo {
-  top: 0;
 }
 
 @media (min-width: @desktop-width) {
